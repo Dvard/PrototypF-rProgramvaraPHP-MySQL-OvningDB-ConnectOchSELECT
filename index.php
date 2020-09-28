@@ -16,9 +16,11 @@ $stmt = $conn->query($q_select);
 	</head>
 	<body>
         <p>
-            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                echo $row['firstname'] . ' ' . $row['lastname'] . '<br>';
-            }
+			<?php
+            	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                	echo $row['firstname'] . ' ' . $row['lastname'] . '<br>';
+            	}
+			?>
         </p>
 	</body>
 </html>
